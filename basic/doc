@@ -1,0 +1,4 @@
+所有非0的值都为true
+1.规范：类名，函数名
+    the convention is to use CamelCase for classes and lower_case_with_underscores for functions and methods.
+    Always use self as the name for the first method argument
