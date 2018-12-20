@@ -38,7 +38,8 @@ for i in range(len(a)):
 print(range(5))  # range返回一个iterable的对象
 print(list(range(5)))  # 将range转换成list
 
-# 4.4. break and continue Statements, and else Clauses on Loops Loop statements may have an else clause; it is
+# 4.4. break and continue Statements,
+#  and else Clauses on Loops Loop statements may have an else clause; it is
 # executed when the loop terminates through exhaustion of the list (with for) or when the condition becomes false (
 # with while), but not when the loop is terminated by a break statement. This is exemplified by the following loop,
 # which searches for prime numbers:
@@ -54,11 +55,28 @@ for n in range(2, 10):
 
 
 # 4.5. pass Statements
-# The pass statement does nothing. It can be used when a statement is required syntactically but the program requires no action.
-# while True:
-#    pass  # Busy-wait for keyboard interrupt (Ctrl+C)
-# This is commonly used for creating minimal classes:
+#  The pass statement does nothing. It can be used when a statement is required syntactically but
+#  the program requires no action. while True: pass  # Busy-wait for keyboard interrupt (Ctrl+C) This is commonly
+# used for creating minimal classes:
 class MyEmptyClass:
     pass
 
 
+# 5.7. More on Conditions
+# The conditions used in while and if statements can contain any operators,
+# not just comparisons. The comparison operators in and not in check whether a value occurs (does not occur) in a
+# sequence. The operators is and is not compare whether two objects are really the same object; this only matters for
+#  mutable objects like lists. All comparison operators have the same priority, which is lower than that of all
+# numerical operators. Comparisons can be chained. For example, a < b == c tests whether a is less than b and
+# moreover b equals c. Comparisons may be combined using the Boolean operators and and or, and the outcome of a
+# comparison (or of any other Boolean expression) may be negated with not. These have lower priorities than
+# comparison operators; between them, not has the highest priority and or the lowest, so that A and not B or C is
+# equivalent to (A and (not B)) or C. As always, parentheses can be used to express the desired composition. The
+# Boolean operators and and or are so-called short-circuit operators: their arguments are evaluated from left to
+# right, and evaluation stops as soon as the outcome is determined. For example, if A and C are true but B is false,
+# A and B and C does not evaluate the expression C. When used as a general value and not as a Boolean, the return
+# value of a short-circuit operator is the last evaluated argument. It is possible to assign the result of a
+# comparison or other Boolean expression to a variable. For example,
+string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'
+non_null = string1 or string2 or string3
+non_null

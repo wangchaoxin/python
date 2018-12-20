@@ -70,3 +70,25 @@ print("a",
 # results in an error: If you need a different string, you should create a new one:
 'J' + word[1:]  # 'Jython'
 word[:2] + 'py'  # 'Pypy'
+
+# 格式化输出
+print("{0}-{1}".format("a", "b"))
+# 空值：None
+a = None
+if a is None:
+    print(a)
+if (a):
+    print(a)
+
+# 移除前后空格
+a = " Hello, World! "
+print(a.strip())  # returns "Hello, World!"
+# 字符串长度
+len(a)
+# 大小写
+a.lower()
+a.upper()
+# 分割
+a.split(',')
+# 替换
+a.replace(',', '')
