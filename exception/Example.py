@@ -82,6 +82,8 @@ class TransitionError(Error):
         self.previous = previous
         self.next = next
         self.message = message
+
+
 # finally语句
 try:
     raise KeyboardInterrupt
@@ -95,3 +97,17 @@ finally:
 with open("myfile.txt") as f:
     for line in f:
         print(line, end="")
+
+try:
+    print(x)
+except:
+    print("An exception occurred")
+
+
+# You can use the else keyword to define a block of code to be executed if no errors were raised:
+try:
+    print("Hello")
+except:
+    print("Something went wrong")
+else:
+    print("Nothing went wrong")

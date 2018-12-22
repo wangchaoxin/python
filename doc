@@ -1,0 +1,8 @@
+1 intall pip
+    sudo easy_install pip
+2 How to use pip with Python 3.x alongside Python 2.x
+    The approach you should take is to install pip for Python 3.2.
+    You do this in the following way:
+    $ curl -O https://bootstrap.pypa.io/get-pip.py
+    $ sudo python3.2 get-pip.py
+    Then, you can install things for Python 3.2 with pip-3.2, and install things for Python 2-7 with pip-2.7

@@ -64,3 +64,52 @@ json.dump('json', f)
 # 从文件中读取json
 f1 = open('jsonFile', 'r')
 print(json.load(f1))
+
+
+# 1 read files
+# "r" - Read - Default value. Opens a file for reading, error if the file does not exist
+# "a" - Append - Opens a file for appending, creates the file if it does not exist
+# "w" - Write - Opens a file for writing, creates the file if it does not exist
+# "x" - Create - Creates the specified file, returns an error if the file exists
+
+# In addition you can specify if the file should be handled as binary or text mode
+# "t" - Text - Default value. Text mode
+# "b" - Binary - Binary mode (e.g. images)
+
+
+f = open("jsonFile.txt", "r")
+print(f.read())
+
+# By default the read() method returns the whole text, but you can also specify how many character you want to return:
+f = open("demofile.txt", "r")
+print(f.read(5))
+
+# 2 write files
+# Open the file "demofile.txt" and append content to the file:
+f = open("demofile.txt", "a")
+f.write("Now the file has one more line!")
+
+# Open the file "demofile.txt" and overwrite the content:
+f = open("demofile.txt", "w")
+f.write("Woops! I have deleted the content!")
+
+# Create a New File
+# To create a new file in Python, use the open() method, with one of the following parameters:
+# "x" - Create - will create a file, returns an error if the file exist
+# "a" - Append - will create a file if the specified file does not exist
+# "w" - Write - will create a file if the specified file does not exist
+# Create a file called "myfile.txt":
+f = open("myfile.txt", "x")
+
+# Create a new file if it does not exist:
+f = open("myfile.txt", "w")
+
+# Delete a File
+import os
+os.remove("/data/a.log ")
+
+if os.path.exists("demofile.txt"):
+    os.remove("demofile.txt")
+
+# Delete Folder
+os.rmdir("myfolder")

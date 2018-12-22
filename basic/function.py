@@ -1,3 +1,6 @@
+# coding=utf-8
+# coding=utf-8
+# coding=utf-8
 # 4.6. Defining Functions
 def fib(n):  # write Fibonacci series up to n
     # 函数注释 The first statement of the function body can optionally be a string literal; this string literal is the
@@ -5,7 +8,7 @@ def fib(n):  # write Fibonacci series up to n
     """Print a Fibonacci series up to n."""
     a, b = 0, 1
     while a < n:
-        print(a, end=' ')
+        print(a)
         a, b = b, a + b
     print()
 
