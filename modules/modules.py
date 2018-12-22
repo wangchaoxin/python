@@ -34,3 +34,10 @@ print(dir(a))
 # Without arguments, dir() lists the names you have defined currently:
 #  it lists all types of names: variables, modules, functions, etc.
 print(dir())
+
+# Re-naming a Module
+import mymodule as mx
+
+# Import From Module
+# You can choose to import only parts from a module, by using the from keyword.
+from mymodule import person1  #  引入变量

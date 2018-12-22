@@ -80,3 +80,19 @@ class MyEmptyClass:
 string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'
 non_null = string1 or string2 or string3
 non_null
+a, b, c = 1, 2, 3
+if a > b and c > a:  # and
+    print("Both conditions are True")
+
+# 2 while loop
+i = 0
+while i < 6:
+    i += 1
+    if i == 3:
+        continue  # 可以是break
+    print(i)
+# for loop
+for x in range(6):
+    print(x)  # 可以有continue和break
+else:         # executed when the loop is finished
+    print("Finally finished!")
