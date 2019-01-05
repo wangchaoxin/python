@@ -10,7 +10,7 @@
 # import fibo.fibo
 
 import a
-from package.fibo import *
+from package.fibo import *  # from .. import 函数名
 import sys
 
 # If the module name is followed by as, then the name following as is bound directly to the imported module.
@@ -36,8 +36,11 @@ print(dir(a))
 print(dir())
 
 # Re-naming a Module
-import mymodule as mx
+import mymodule as mx   # 改变成新名字
 
 # Import From Module
 # You can choose to import only parts from a module, by using the from keyword.
 from mymodule import person1  #  引入变量
+
+if __name__=='main':
+    print("作为主函数执行")

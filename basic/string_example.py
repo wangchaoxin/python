@@ -73,6 +73,9 @@ word[:2] + 'py'  # 'Pypy'
 
 # 格式化输出
 print("{0}-{1}".format("a", "b"))
+# 另一种格式化方式
+age_ = "%s is %d" % ('age', 18)
+print(age_)
 # 空值：None
 a = None
 if a is None:

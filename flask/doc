@@ -1,0 +1,12 @@
+1 启动程序
+    $ export FLASK_APP=hello.py
+    $ flask run
+2 flask run启动不了
+    需要切换到当前工程目录下
+    Error: Could not import "app".
+3 Externally Visible Server  默认只能当前主机访问
+    flask run --host=0.0.0.0  允许所有主机访问
+4 设置debug模式，自动加载代码
+    export FLASK_ENV=development
+5 指定端口
+    export FLASK_RUN_PORT=8000

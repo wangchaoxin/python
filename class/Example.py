@@ -29,22 +29,29 @@ class Dog:
     def add_trick(self, trick):
         self.tricks.append(trick)
 
+    def hello(self):
+        print("parent hello")
+
 
 # 一个文件里还可以单独定义函数
 def test():
     print("test")
 
 
-# 3.继承
+# 3.继承,
 class ADog(Dog):
+    # 子类默认会覆盖父类方法，通过super()调用父类方法
     def __init__(self, name):
+        # Dog.__init__(name)    调用父类方法
         super().__init__(name)
-        Dog.add_trick(1)  # 调用父类方法,通过类名调用
+        self.add_trick(1)  # 调用父类方法,通过类名调用
 
     def test(self):
         self.add_trick(1)  # 调用父类方法，通过实例调用
 
 
+dog = ADog('ADog')
+dog.hello()
 # 可以将函数赋值给变量
 b = test
 b()
@@ -82,8 +89,13 @@ print(a)
 class A:
     def __init__(self):
         pass
+
     __age = 1  # 私有变量
-    _name = ""  # protected变量
+    _name = "haha"  # protected变量
+
+    # 私有函数
+    def __privateMethod(self):
+        pass
 
 
 class B:
